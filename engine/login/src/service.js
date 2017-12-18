@@ -3,7 +3,7 @@ const engineRoot = ENGINE_PATH+'/login';
 const crypto = require('crypto');
 const Sequelize = require('sequelize');
 const datasource = require(engineRoot+'/src/config/datasource.json');
-const jumpUrl = require(engineRoot+'/src/config/jump.json');
+let jumpUrl = require(engineRoot+'/src/config/jump.json');
 const sequelize = new Sequelize(
   datasource.database,
   datasource.username,
@@ -20,10 +20,14 @@ sequelize.sync({force: false}).then(function() {
 
 function service(net) {
 
-  net.data.jumpUrl = jumpUrl;
+  net.data.jumpUrl = jumpUrl; 
 
   this.init = function(ctx) { 
-    return ctx.render("login/web/login/login.ejs", {});
+    if(ctx.session.user){
+      return ctx.body = "已经登录成功！<a href='"+jumpUrl.login_success+"'>返回</a>";
+    }else{
+      return ctx.render("login/web/login/login.ejs", {});
+    } 
   }
 
   this.register = function(ctx){

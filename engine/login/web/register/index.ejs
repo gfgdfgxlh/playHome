@@ -15,6 +15,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-sm-2 control-label" >昵称:</label>
+                    <div class="col-sm-10">
+                        <input id="nc" name="nc" class="form-control" type="text" placeholder="请输入昵称" />
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-sm-2 control-label">密码:</label>
                     <div class="col-sm-10">
                         <input id="password" name="password" class="form-control" type="password" placeholder="请输入密码" />
@@ -33,15 +39,59 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" >昵称:</label>
+                    <label class="col-sm-2 control-label" >安全问题:</label>
                     <div class="col-sm-10">
-                        <input id="nc" name="nc" class="form-control" type="text" placeholder="请输入昵称" />
+                        <select class="select" name="safeQuestion" id="safeQuestion">
+                            <option value="没有安全问题" selected>没有安全问题</option>
+                            <option value="你家乡的名称是什么？">你家乡的名称是什么？</option>
+                            <option value="你读的小学叫什么？">你读的小学叫什么？</option> 
+                            <option value="你的父亲叫什么名字？">你的父亲叫什么名字？</option> 
+                            <option value="你的母亲叫什么名字？">你的母亲叫什么名字？</option> 
+                            <option value="你最喜欢的偶像是谁？">你最喜欢的偶像是谁？</option> 
+                            <option value="你最喜欢的歌曲是什么？">你最喜欢的歌曲是什么？</option> 
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" >手机号:</label>
+                    <label class="col-sm-2 control-label" >问题答案:</label>
                     <div class="col-sm-10">
-                        <input id="phoneNum" name="phoneNum" class="form-control" type="tel" placeholder="请输入手机号" />
+                        <input id="answer" name="answer" class="form-control" type="text" placeholder="请输入问题答案" />
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" >性别:</label>
+                    <div class="col-sm-10">
+                        <input name="sex" type="radio" value="男"> 男 &nbsp;&nbsp;
+                        <input name="sex" type="radio" value="女"> 女
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" >年龄:</label>
+                    <div class="col-sm-10">
+                        <input id="age" name="age" class="form-control" type="text" placeholder="请输入年龄" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" >真实姓名:</label>
+                    <div class="col-sm-10">
+                        <input id="realName" name="realName" class="form-control" type="text" placeholder="请输入真实姓名" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" >身份证号:</label>
+                    <div class="col-sm-10">
+                        <input id="idCard" name="idCard" class="form-control" type="text" placeholder="请输入身份证号" />
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" >服务协议:</label>
+                    <div class="col-sm-10">
+                        <a href="/agreement.html" target="_blank">点击查看</a>
+                    </div>
+                </div>
+                <div class="form-group"> 
+                    <div class="col-sm-12" align="center">
+                        <input name="readed" type="checkbox"> 我已经阅读并完全接受服务协议
                     </div>
                 </div>
                 <div class="form-group">

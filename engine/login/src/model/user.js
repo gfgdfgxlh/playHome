@@ -28,6 +28,21 @@ module.exports = function(sequelize, DataTypes) {
     age: {
       type: DataTypes.INTEGER
     },
+    safequestion:{
+      type: DataTypes.STRING,
+    },
+    answer:{
+      type: DataTypes.STRING,
+    },
+    realname:{
+      type: DataTypes.STRING,
+    },
+    idcard:{
+      type: DataTypes.STRING,
+    },
+    sex:{
+      type: DataTypes.STRING,
+    },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue : DataTypes.NOW

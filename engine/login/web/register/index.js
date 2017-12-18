@@ -95,12 +95,12 @@ function checkInfo(){
                     }
                 }
             },
-            phoneNum:{
-                message: '手机验证失败',
+            idCard:{
+                message: '身份证号验证失败',
                 validators: {
                     regexp: {
-                        regexp: /^1[3|5|8]{1}[0-9]{9}$/,
-                        message: '请输入正确的手机号码'
+                        regexp: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
+                        message: '请输入正确的身份证号码'
                     }
                 }
             }
@@ -114,7 +114,12 @@ function saveInfo(){
         password:$("#password").val(),
         email:$("#myEmail").val(),
         name:$("#nc").val(),
-        phone:$("#phoneNum").val()
+        safequestion:$("#safeQuestion").val(),
+        answer:$("#answer").val(),
+        age:$("#age").val(),
+        realname:$("#realName").val(),
+        idcard:$("#idCard").val(),
+        sex:$("[name='sex']:checked").val()
     }; 
     net.getView("addUser",JSON.stringify(userObj),function(res){
         var obj = JSON.parse(res);
@@ -130,7 +135,13 @@ function saveInfo(){
 
 $(function(){
     checkInfo();
-    $("#saveUser").bind("click",function(){
+    $("#saveUser").bind("click",function(){ 
+        var flag = $("[name='readed']").prop("checked");
+        if(!flag){
+            alert("请仔细阅读服务协议并勾选");
+            return;
+        }
+
         $("#userform").bootstrapValidator('validate');
         if($('#userform').data('bootstrapValidator').isValid()){
             saveInfo();
