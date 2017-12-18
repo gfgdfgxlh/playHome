@@ -5,7 +5,7 @@ function adjustmentPage(){
     var formHeight = $(".row").height();
     var pageHeight = $(".container-fluid").height();
     var topH = pageHeight/2-formHeight;
-    $(".row").css("margin-top","200px");
+    $(".row").css("margin-top","100px");
 }
 
 //绑定事件
