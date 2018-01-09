@@ -33,7 +33,28 @@
 		<script src="/templets/default/js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>		<script src="/templets/default/js/ie6png.js" type="text/javascript" charset="utf-8"></script>		<script type="text/javascript">
 			IE6PNG.fix('*');
 		</script>
-<![endif]--></head>
+<![endif]-->
+<style>
+.recommend_list{width:100%;float:left; position:relative}
+.exchange_bt{ position:absolute;top:-30px; right:20px; line-height:25px; background:url(/public/web/images/group.png) left center no-repeat; padding-left:25px; color:#737373; font-size:14px;cursor:pointer;}
+.recommend_list li{width:333px;float:left;border:1px solid #fff;padding:10px;color:#6c6c6c;margin:15px 0 0 15px;display:inline;}
+.recommend_list li:hover{border:1px solid #099cda;}
+.recommend_list li .p1{width:80px;float:left;}
+.recommend_list li .p1 img{width:80px;height:80px;display:block;}
+.recommend_list li .p2{width:130px;float:left; margin-left:10px; display:inline;}
+.recommend_list li .p2 a{width:100%;float:left;font-size:14px;color:#5d5d5d;line-height:25px; height:25px; overflow:hidden; white-space:nowrap;text-overflow:ellipsis; font-weight:bold}
+.recommend_list li .p2 a:hover{color:#ff6200;}
+.recommend_list li .p2 span{width:100%;float:left; line-height:18px; margin-top:3px}
+.recommend_list li .p3{width:100px;float:right;}
+.recommend_list li .p3 a,.recommend_list li .p3 span,.new_game li .p2 em a{ width:95px; line-height:32px;float:left;font-size:14px; color:#099cda;border:1px solid #099cda; text-align:center}
+.recommend_list li .p3 a:hover,.recommend_list li .p3 span:hover,.new_game li .p2 em a:hover{background:#099cda;color:#fff;text-decoration:none;border:1px solid #099cda;}
+.recommend_list li .p3 span{cursor:pointer; margin-top:8px;color:#717171;border:1px solid #e0e0e0;}
+.recommend_list li .p4{position:relative;width:100px;float:right;}
+.recommend_list li .p4 p{background:url(/public/web/images/code_bg.png) no-repeat; width:160px; height:156px; position:absolute;top:-157px;right:-160px; display:none; text-align:center; line-height:156px;}
+.recommend_list li .p4 p img{width:142px;height:142px; vertical-align:middle}
+</style>
+
+</head>
 <body >
 
 <div class="body-main">
@@ -136,32 +157,121 @@
   <h2>
   <span>游戏中心</span> / PRODUCT  </h2>
 </div>
-<div class="inner-main max-min">
-  <div class="left">
-   	<ul>
-    <li class=""><a href="./llk.html"><img src="./game_files/7.png" width="46" height="46">萌趣连连看</a>
-          
-        </li>    
-   </ul>	 
-  </div>
-  <div class="right">
-    <div class="prori">
-      <ul class="gallery">
-			<li> <img width="240" height="240" src="./game_files/190638.jpg" alt="">
-						  <div class="proliname"> 《萌趣连连看》<span>萌趣连连看</span></div>
-						  <div class="prolicover"></div>
-						  <div class="prolitext">开始游戏 签到 绿色植物场景 雪地冰川场景 沙漠芜地场景 幽夜墓地场景 游戏关卡 晋级 道具 道具 奖励 胜利</div>
-						  <div class="prolimore"><a target="_blank" href="./llk.html">了解更多</a></div>
-						</li>		
-	 </ul>
-		
-    </div>
-    <div class="pages">
-<li><span class="pageinfo">共 <strong>1</strong>页<strong>1</strong>条记录</span></li>
-
+<div class="inner-main max-min" style="height:500px;">
+   
+  <div class="recommend_list" id="con_one_1" style="display: block;">
+    <div class="exchange_bt">换一组</div>
+    <!--星级规则0就是0个星，5是半个星，10是一个星，以此类推-->
+    <ul>						
+        <li>
+                <div class="p1">
+                    <a target="_blank" title="阴阳师" href="#">
+                        <img src="./game_files/yys_1513673690.png"></a>
+                </div>
+                <div class="p2">
+                    <a target="_blank" title="阴阳师" href="#">阴阳师</a> 
+                    <i class="star_one star_one_50"></i> 
+                    <span>
+                        类型：
+       策略类                                    <br>人气：4272</span>
+                </div>
+                <div class="p3">
+                    <a href=" ">开始游戏</a>
+                     
+                </div>
+                <div class="p4">
+                    <p style="display: none;">
+                        <img src="./game_files/chart.ashx">
+                    </p>
+                </div>
+            </li><li>
+                <div class="p1">
+                    <a target="_blank" title="fgo" href="#">
+                        <img src="./game_files/fgo_1513673381.png"></a>
+                </div>
+                <div class="p2">
+                    <a target="_blank" title="fgo" href="#">fgo</a> 
+                    <i class="star_one star_one_50"></i> 
+                    <span>
+                        类型：
+       策略类                                    <br>人气：6248</span>
+                </div>
+                <div class="p3">
+                    <a target="_blank" href="">开始游戏</a>
+                    
+                </div>
+                <div class="p4">
+                    <p style="display: none;">
+                        <img src="./game_files/chart(1).ashx">
+                    </p>
+                </div>
+            </li><li>
+                <div class="p1">
+                    <a target="_blank" title="崩坏3" href="#">
+                        <img src="./game_files/bh3_1513673094.png"></a>
+                </div>
+                <div class="p2">
+                    <a target="_blank" title="崩坏3" href="#">崩坏3</a> 
+                    <i class="star_one star_one_50"></i> 
+                    <span>
+                        类型：
+       动作类                                    <br>人气：331</span>
+                </div>
+                <div class="p3">
+                    <a target="_blank" href="#">开始游戏</a>
+                    
+                </div>
+                <div class="p4">
+                    <p style="display: none;">
+                        <img src="./game_files/chart(2).ashx">
+                    </p>
+                </div>
+            </li><li>
+                <div class="p1">
+                    <a target="_blank" title="刀剑神域" href="#">
+                        <img src="./game_files/djsy_1513672092.png"></a>
+                </div>
+                <div class="p2">
+                    <a target="_blank" title="刀剑神域" href="#">刀剑神域</a> 
+                    <i class="star_one star_one_50"></i> 
+                    <span>
+                        类型：
+       冒险类                                    <br>人气：134</span>
+                </div>
+                <div class="p3">
+                    <a target="_blank" href="#">开始游戏</a>
+                    
+                </div>
+                <div class="p4">
+                    <p style="display: none;">
+                        <img src="./game_files/chart(3).ashx">
+                    </p>
+                </div>
+            </li><li>
+                <div class="p1">
+                    <a target="_blank" title="艾希" href="#">
+                        <img src="./game_files/ax_1513674261.png"></a>
+                </div>
+                <div class="p2">
+                    <a target="_blank" title="艾希" href="#">艾希</a> 
+                    <i class="star_one star_one_50"></i> 
+                    <span>
+                        类型：
+       动作类                                    <br>人气：7</span>
+                </div>
+                <div class="p3">
+                    <a target="_blank" href="#">开始游戏</a>
+                    
+                </div>
+                <div class="p4">
+                    <p style="display: none;">
+                        <img src="./game_files/chart(4).ashx">
+                    </p>
+                </div>
+            </li>
+            
+    </ul>
 </div>
-  </div>
-  <div style=" clear:both"></div>
 </div>
 <form action="/" name="search_form">
 <input type="hidden" name="mid" value="2">
@@ -181,7 +291,7 @@
 <div class="foot-links">
   
 </div>
-<div class="foot-bt" style="height:99px;    font-size: 15px;">
+<div class="foot-bt" style="height:119px;font-size: 15px;">
   <div class="foot-bt-content">
     <div class="left">
       <div class="ft-logo-png"></div>
